@@ -6,7 +6,7 @@ setup(
     version='0.0.0',
     requires=[
     ],
-    packages=['tests', 'aiomock'],
+    packages=['aiomock'],
     url='https://github.com/nhumrich/aiomock',
     license='MIT',
     author='nhumrich',
