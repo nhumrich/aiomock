@@ -55,7 +55,7 @@ async def test_wait_for_it(monkeypatch):
 or for side_effect, use
 
 ```python
-mock.func_name.async_side_affect = [1, 2]
+mock.func_name.async_side_effect = [1, 2]
 ```
 
 You can even use it with lambdas, and it will convert it to an awaitable
