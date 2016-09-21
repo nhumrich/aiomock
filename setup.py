@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='aiomock',
-    version='0.0.0',
+    version='0.1.0',
     requires=[
     ],
     packages=['aiomock'],

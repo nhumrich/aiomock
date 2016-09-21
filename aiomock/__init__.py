@@ -1,4 +1,3 @@
-import asyncio
 import unittest.mock
 from unittest.mock import Mock, _try_iter
 
@@ -48,3 +47,10 @@ class AIOMock(Mock):
             return self._mock_awaitable(ret_val)
         else:
             return ret_val
+
+    async def __aenter__(self):
+        return self
+
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        pass
+
