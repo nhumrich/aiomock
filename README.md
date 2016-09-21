@@ -30,12 +30,12 @@ not awaitable. This means you have to write a function for every test
 
 ```python
 async def test_wait_for_it(monkeypatch):
-    my_queue = Mock()
+    mock = Mock()
     async def my_get():
         return 1
     mock.get = my_get
 
-    monkeypatch.setattr(asyncio.Queue, my_queue)
+    monkeypatch.setattr(asyncio.Queue, mock)
 ```
 
 Its annoying that Mock has two excellant features, `side_effect`, and `return`, but
@@ -46,10 +46,10 @@ you cant use them because we are async. This fixes that
 from aiomock import AIOMock
 
 async def test_wait_for_it(monkeypatch):
-    my_queue = AIOMock()
+    mock = AIOMock()
     mock.get.async_return_value = 1
 
-    monkeypatch.setattr(asyncio.Queue, my_queue)
+    monkeypatch.setattr(asyncio.Queue, mock)
 ```
 
 or for side_effect, use
