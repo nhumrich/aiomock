@@ -6,6 +6,9 @@ This mock works exactly like unitest.mock.Mock, except that it also includes the
 * mock.async_return_value  - an awaitable version of return_value
 * mock.async_side_effect   - an awaitable version of side_effect
 
+> [!Warning]
+> This project is likely not needed. Python 3.8 added an official AsyncMock object to the standard Library: https://docs.python.org/3.8/library/unittest.mock.html#unittest.mock.AsyncMock
+
 # installing
 
 ```
